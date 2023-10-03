@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geolocations and Media</title>
+</head>
+
+<body>
+  <div class="root">
+    <div class="timeline">
+      <div class="controls">
+        <form class="text-input__form">
+          <input type="text" class="textarea" name="content">
+        </form>
+        <button class="audio">🎤</button>
+        <button class="video">📷</button>
+      </div>
+    </div>
+  </div>
+  <dialog class="coords-popup">
+    <div class="coords-header">
+      <h3>Что-то пошло не так</h3>
+      <span class="coords-title">К сожалению нам не удалось определить ваше местоположение. Пожалуйста дайте согласие
+        на&nbsp;использование геолокации, либо введите координаты вручную.</span>
+    </div>
+    <div class="coords-body">
+      <form class="coords-form" novalidate>
+        <div class="inputs">
+          <label class="label first-input">
+            <span class="input-text">Широта:</span>
+            <input name="latitude" class="popup__input" placeholder="Например: 00.00000" type="text"
+              pattern="−?\d+.\d+" required>
+          </label>
+          <label class="label">
+            <span class="input-text">Долгота:</span>
+            <input name="longitude" class="popup__input" placeholder="Например: 00.00000" type="text"
+              pattern="−?\d+.\d+" required>
+          </label>
+        </div>
+        <button class="coords-button">Продолжить</button>
+      </form>
+    </div>
+  </dialog>
+
+</body>
+
+</html>
