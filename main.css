@@ -1,0 +1,185 @@
+/* Set a background color */
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+  font-size: 12pt;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 10%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the right */
+.right {
+  left: 10%;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  left: 10%;
+}
+
+.coords-popup {
+  max-width: 400px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+
+  border: none;
+  outline: none;
+
+  padding: 25px;
+  background: rgb(255, 255, 255);
+  border-radius: 1rem;
+
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.coords-popup::backdrop {
+  background-color: darkcyan;
+}
+
+.coords-header {
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.coords__input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #c9cacc;
+  border-radius: 5px;
+}
+
+.first-input {
+  margin-bottom: 10px;
+}
+
+.coords__input:focus {
+  outline: none;
+  border: 1px solid #20b1df;
+}
+
+.coords-error {
+  display: block;
+  font-size: 14px;
+  color: red;
+  text-align: center;
+  margin-top: 5px;
+}
+
+button {
+  margin-left: 10px;
+  border-radius: 5px;
+  border: 1px solid #c9cacc;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.form-element {
+  margin-bottom: 10px;
+}
+
+.coords-form {
+  display: flex;
+}
+
+.label {
+  display: flex;
+  align-items: flex-start;
+  
+  text-align: left;
+}
+
+.input-text {
+  min-width: 80px;
+}
+
+.text-input__form {
+  width: 100%;
+}
+
+.textarea {
+  width: 95%;
+}
+
+.date {
+  text-align: right;
+}
+
+/*# sourceMappingURL=main.css.map*/
